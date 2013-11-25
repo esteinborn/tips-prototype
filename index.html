@@ -1,120 +1,57 @@
 <!doctype html>
 <!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
 <html class="no-js" lang="en" >
-  <head>
-    <meta name="viewport" content="initial-scale=1.0" />
-
-    <title>Search Public Registry of Sex Offenders</title>
-    <link href='{{assets}}/css/foundation.css' rel='stylesheet' />
-    <link href='{{assets}}/css/app.css' rel='stylesheet' />
-    <script src="{{assets}}/js/vendor/custom.modernizr.js"></script>
-  </head>
-  <body>
-    <div class="row">
-      <div class="large-12 columns">
-        <form>
-          <fieldset>
-            <legend>Legend</legend>
-            <div class="row">
-              <div class="large-3 small-5 columns">
-                <label>Label</label>
-                <input type="text" />
-              </div>
-            </div>
-            <div class="row">
-              <div class="large-12 columns">
-                <label>Label</label>
-                <select name="County" id="County">
-                  <option value="" selected="selected"></option>
-                  <option value="1">Albany </option>
-                  <option value="2">Allegany</option>
-                  <option value="3">Bronx</option>
-                  <option value="4">Broome</option>
-                  <option value="5">Cattaraugus</option>
-                  <option value="6">Cayuga</option>
-                  <option value="7">Chautauqua</option>
-                  <option value="8">Chemung</option>
-                  <option value="9">Chenango</option>
-                  <option value="10">Clinton</option>
-                  <option value="11">Columbia</option>
-                  <option value="12">Cortland</option>
-                  <option value="13">Delaware</option>
-                  <option value="14">Dutchess</option>
-                  <option value="15">Erie</option>
-                  <option value="16">Essex</option>
-                  <option value="17">Franklin</option>
-                  <option value="18">Fulton</option>
-                  <option value="19">Genesee</option>
-                  <option value="20">Greene</option>
-                  <option value="21">Hamilton</option>
-                  <option value="22">Herkimer</option>
-                  <option value="23">Jefferson</option>
-                  <option value="24">Kings</option>
-                  <option value="25">Lewis</option>
-                  <option value="26">Livingston</option>
-                  <option value="27">Madison</option>
-                  <option value="28">Monroe</option>
-                  <option value="29">Montgomery</option>
-                  <option value="30">Nassau</option>
-                  <option value="31">New York</option>
-                  <option value="32">Niagara</option>
-                  <option value="33">Oneida</option>
-                  <option value="34">Onondaga</option>
-                  <option value="35">Ontario</option>
-                  <option value="36">Orange</option>
-                  <option value="37">Orleans</option>
-                  <option value="38">Oswego</option>
-                  <option value="39">Otsego</option>
-                  <option value="40">Putnam</option>
-                  <option value="41">Queens</option>
-                  <option value="42">Rensselaer</option>
-                  <option value="43">Richmond</option>
-                  <option value="44">Rockland</option>
-                  <option value="45">Saint Lawrence</option>
-                  <option value="46">Saratoga</option>
-                  <option value="47">Schenectady</option>
-                  <option value="48">Schoharie</option>
-                  <option value="49">Schuyler</option>
-                  <option value="50">Seneca</option>
-                  <option value="51">Steuben</option>
-                  <option value="52">Suffolk</option>
-                  <option value="53">Sullivan</option>
-                  <option value="54">Tioga</option>
-                  <option value="55">Tompkins</option>
-                  <option value="56">Ulster</option>
-                  <option value="57">Warren</option>
-                  <option value="58">Washington</option>
-                  <option value="59">Wayne</option>
-                  <option value="60">Westchester</option>
-                  <option value="61">Wyoming</option>
-                  <option value="62">Yates</option>
-                  <option value="63">Out of State</option>
-                  <option value="99">Unknown</option>
-                  <option value="64">Out of Country</option>
-                </select>
-              </div>
-            </div>
-            <div class="row">
-              <div class="large-12 columns">
-                <label>Label</label>
-                <input type="text" />
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="large-12 columns">
-            <p><a href="#" class="button right">Button</a></p>
-              </div>
-            </div>
-          </fieldset>
-        </form>
-      </div>
-    </div>
-    <script src="{{assets}}/js/vendor/jquery.js"></script>
-    <script>
+<head>
+<meta name="viewport" content="initial-scale=1.0" />
+<title>Missing Persons Tips</title>
+<link href='{{assets}}/css/foundation.css' rel='stylesheet' />
+<link href='{{assets}}/css/app.css' rel='stylesheet' />
+<script src="{{assets}}/js/vendor/custom.modernizr.js"></script>
+</head>
+<body>
+<div class="row">
+  <div class="large-12 columns">
+    <h1>Header</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="large-12 columns">
+    <form>
+      <fieldset>
+        <legend>Legend</legend>
+        <div class="row">
+          <div class="large-12 columns">
+            <label for="Iama">I am a... </label>
+            <select id="responding" name="Iama">
+              <option value="firstResponder">First Responder</option>
+              <option value="dispatcher">Dispatcher</option>
+              <option value="supervisor">Supervisor</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-12 columns">
+            <label for="responding">Responding to a... </label>
+            <select id="responding" name="responding">
+              <option value="missingChild">Missing Child</option>
+              <option value="MissingVulnerableAdult">Missing Vulnerable Adult</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-12 columns">
+            <p><a href="#" class="button right">Next</a></p>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</div>
+<script src="{{assets}}/js/vendor/jquery.js"></script> 
+<script>
     $.getScript("{{assets}}/js/foundation.js", function(){
       $(document).foundation();
     });
     </script>
-  </body>
+</body>
 </html>
