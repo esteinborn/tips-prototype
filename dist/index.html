@@ -1,120 +1,107 @@
 <!doctype html>
 <!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
 <html class="no-js" lang="en" >
-  <head>
-    <meta name="viewport" content="initial-scale=1.0" />
+<head>
+<meta name="viewport" content="initial-scale=1.0" />
+<title>Missing Persons Tips</title>
+<link href='assets/css/foundation.css' rel='stylesheet' />
+<link href='assets/css/app.css' rel='stylesheet' />
+<script src="assets/js/vendor/custom.modernizr.js"></script>
+</head>
+<body>
+<div class="row">
+  <div class="large-12 columns">
+    <h1>Header</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="large-12 columns">
+    <form>
+      <fieldset>
+        <legend>Legend</legend>
+        <div class="row">
+          <div class="large-12 columns">
+            <label for="Iama">I am a... </label>
+            <select id="responding" name="Iama">
+              <option value="firstResponder">First Responder</option>
+              <option value="dispatcher">Dispatcher</option>
+              <option value="supervisor">Supervisor</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-12 columns">
+            <label for="responding">Responding to a... </label>
+            <select id="responding" name="responding">
+              <option value="missingChild">Missing Child</option>
+              <option value="MissingVulnerableAdult">Missing Vulnerable Adult</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-12 columns">
+            <p><a href="#" class="button right">Next</a></p>
+          </div>
+        </div>
+      </fieldset>
+      <div id="disclaimer" name="disclaimer"><p>Disclaimer:</p>
+  <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+  <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p></div>
+    </form>
 
-    <title>Search Public Registry of Sex Offenders</title>
-    <link href='assets/css/foundation.css' rel='stylesheet' />
-    <link href='assets/css/app.css' rel='stylesheet' />
-    <script src="assets/js/vendor/custom.modernizr.js"></script>
-  </head>
-  <body>
-    <div class="row">
-      <div class="large-12 columns">
-        <form>
-          <fieldset>
-            <legend>Search by one field only</legend>
-            <div class="row">
-              <div class="large-3 small-5 columns">
-                <label>Zip Code</label>
-                <input type="text" />
-              </div>
-            </div>
-            <div class="row">
-              <div class="large-12 columns">
-                <label>County</label>
-                <select name="County" id="County">
-                  <option value="" selected="selected"></option>
-                  <option value="1">Albany </option>
-                  <option value="2">Allegany</option>
-                  <option value="3">Bronx</option>
-                  <option value="4">Broome</option>
-                  <option value="5">Cattaraugus</option>
-                  <option value="6">Cayuga</option>
-                  <option value="7">Chautauqua</option>
-                  <option value="8">Chemung</option>
-                  <option value="9">Chenango</option>
-                  <option value="10">Clinton</option>
-                  <option value="11">Columbia</option>
-                  <option value="12">Cortland</option>
-                  <option value="13">Delaware</option>
-                  <option value="14">Dutchess</option>
-                  <option value="15">Erie</option>
-                  <option value="16">Essex</option>
-                  <option value="17">Franklin</option>
-                  <option value="18">Fulton</option>
-                  <option value="19">Genesee</option>
-                  <option value="20">Greene</option>
-                  <option value="21">Hamilton</option>
-                  <option value="22">Herkimer</option>
-                  <option value="23">Jefferson</option>
-                  <option value="24">Kings</option>
-                  <option value="25">Lewis</option>
-                  <option value="26">Livingston</option>
-                  <option value="27">Madison</option>
-                  <option value="28">Monroe</option>
-                  <option value="29">Montgomery</option>
-                  <option value="30">Nassau</option>
-                  <option value="31">New York</option>
-                  <option value="32">Niagara</option>
-                  <option value="33">Oneida</option>
-                  <option value="34">Onondaga</option>
-                  <option value="35">Ontario</option>
-                  <option value="36">Orange</option>
-                  <option value="37">Orleans</option>
-                  <option value="38">Oswego</option>
-                  <option value="39">Otsego</option>
-                  <option value="40">Putnam</option>
-                  <option value="41">Queens</option>
-                  <option value="42">Rensselaer</option>
-                  <option value="43">Richmond</option>
-                  <option value="44">Rockland</option>
-                  <option value="45">Saint Lawrence</option>
-                  <option value="46">Saratoga</option>
-                  <option value="47">Schenectady</option>
-                  <option value="48">Schoharie</option>
-                  <option value="49">Schuyler</option>
-                  <option value="50">Seneca</option>
-                  <option value="51">Steuben</option>
-                  <option value="52">Suffolk</option>
-                  <option value="53">Sullivan</option>
-                  <option value="54">Tioga</option>
-                  <option value="55">Tompkins</option>
-                  <option value="56">Ulster</option>
-                  <option value="57">Warren</option>
-                  <option value="58">Washington</option>
-                  <option value="59">Wayne</option>
-                  <option value="60">Westchester</option>
-                  <option value="61">Wyoming</option>
-                  <option value="62">Yates</option>
-                  <option value="63">Out of State</option>
-                  <option value="99">Unknown</option>
-                  <option value="64">Out of Country</option>
-                </select>
-              </div>
-            </div>
-            <div class="row">
-              <div class="large-12 columns">
-                <label>Last Name</label>
-                <input type="text" />
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="large-12 columns">
-            <p><a href="#" class="button right">Search</a></p>
-              </div>
-            </div>
-          </fieldset>
-        </form>
-      </div>
-    </div>
-    <script src="assets/js/vendor/jquery.js"></script>
-    <script>
+  </div>
+</div>
+<div class="row">
+  <form>
+  <div class="large-4 medium-6 small-12 columns">
+    <fieldset>
+        <legend>Health and Safety</legend>
+        <input id="alzheimers" type="checkbox"><label for="checkbox1">Alzheimer's Disease</label><br>
+        <input id="alcohol" type="checkbox"><label for="checkbox2">Alcoholic</label><br>
+        <input id="retardation" type="checkbox"><label for="checkbox1">Mental Retardation</label><br>
+        <input id="autism" type="checkbox"><label for="checkbox2">Autism</label><br>
+        <input id="suicidal" type="checkbox"><label for="checkbox2">Despondent/Suicidal</label><br>
+        <input id="medical" type="checkbox"><label for="checkbox2">Other Medical Condition</label><br>
+        <input id="meds" type="checkbox"><label for="checkbox2">Lack of required medication</label><br>    
+    </fieldset>
+  </div>
+  <div class="large-4 medium-6 small-12 columns">
+    <fieldset>
+        <legend>Age</legend>
+        <input id="under14" type="checkbox"><label for="checkbox1">Children Under 14</label><br>
+        <input id="teen" type="checkbox"><label for="checkbox2">Children 14-18</label><br>
+        <input id="adult" type="checkbox"><label for="checkbox1">Adult</label><br>
+        <input id="elderly" type="checkbox"><label for="checkbox2">Elderly Adult</label><br>      
+    </fieldset>
+  </div>
+  <div class="large-4 medium-6 small-12 columns">
+    <fieldset>
+        <legend>Location</legend>
+        <input id="rural" type="checkbox"><label for="checkbox1">Rural</label><br>
+        <input id="suburb" type="checkbox"><label for="checkbox2">Suburban</label><br>
+        <input id="urban" type="checkbox"><label for="checkbox1">Urban</label><br>
+        <input id="water" type="checkbox"><label for="checkbox2">Near a Body of Water</label><br>
+        <input id="pubtrans" type="checkbox"><label for="checkbox2">Access to Public Transportation</label><br>
+    </fieldset>
+  </div>
+  <div class="large-4 medium-6 small-12 columns">
+    <fieldset>
+        <legend>Incident</legend>
+        <input id="rural" type="checkbox"><label for="checkbox1">Runaway</label><br>
+        <input id="suburb" type="checkbox"><label for="checkbox2">Miscommunication</label><br>
+        <input id="late" type="checkbox"><label for="checkbox1">Late Return from Activity</label><br>
+        <input id="kidnapped" type="checkbox"><label for="checkbox1">Kidnapped</label><br>
+        <input id="abducted" type="checkbox"><label for="checkbox1">Abducted</label><br>
+        <input id="unknown" type="checkbox"><label for="checkbox1">Unknown Incident</label><br>
+    </fieldset>
+  </div>
+</form>
+</div>
+<script src="assets/js/vendor/jquery.js"></script> 
+<script>
     $.getScript("assets/js/foundation.js", function(){
       $(document).foundation();
     });
     </script>
-  </body>
+</body>
 </html>
