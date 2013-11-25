@@ -75,6 +75,7 @@ module.exports = function(grunt) {
         files: [
           {cwd: 'js/', expand:true, filter: 'isFile', src: ['{foundation,vendor}/**/*.js'], dest: 'dist/assets/js'},
           {cwd: 'scss/', expand:true, filter: 'isFile', src: '**/*.scss', dest: 'dist/assets/scss/'},
+          {cwd: 'scss/foundation/components/fonts', expand:true, filter: 'isFile', src: '**/*', dest: 'dist/assets/css/fonts'},
           {src: 'bower.json', dest: 'dist/assets/'}
         ]
       }
