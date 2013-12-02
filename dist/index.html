@@ -9,8 +9,8 @@
 <script src="assets/js/vendor/custom.modernizr.js"></script>
 </head>
 <body>
-<div class="fixed"> 
-  <nav class="top-bar" data-topbar> 
+<div class="fixed">
+  <nav class="top-bar" data-topbar>
   <div class="large-11 small-10 columns">
     <ul class="title-area">
     <li class="name">
@@ -20,139 +20,248 @@
   </div>
   <div class="large-1 small-2 columns">
       <a href="#">Info</i></a>
-  </div> 
-  </nav> 
+  </div>
+  </nav>
 </div>
 
 <div class="row">
-  <div class="large-12 columns">
-    <form>
+  <div class="iamaPanelSubmitted hide">
+    <div class="small-8 columns">
+      <p>I am a <b><span class="iamaValue"></span></b></p>
+      <p>Responding to a <b><span class="respondingValue"></span></b></p>
+    </div>
+    <div class="small-4 columns">
+      <p><a href="#" class="button panelTrigger" data-panel="iamaPanel"><i class="fi-rewind"></i><br>Restart</a></p>
+    </div>
+  </div>
+  <div class="large-12 columns iamaPanel">
+    <form id="iamaForm" action="#" method="post">
       <fieldset>
         <legend>Complete the following</legend>
         <div class="row">
           <div class="large-12 columns">
-            <label for="Iama">I am a... </label>
-            <select id="responding" name="Iama">
-              <option value="firstResponder">First Responder</option>
-              <option value="dispatcher">Dispatcher</option>
-              <option value="supervisor">Supervisor</option>
+            <label for="iama">I am a... </label>
+            <select id="iama" name="iama" class="iama">
+              <option value="First Responder">First Responder</option>
+              <option value="Dispatcher">Dispatcher</option>
+              <option value="Supervisor">Supervisor</option>
             </select>
           </div>
         </div>
         <div class="row">
           <div class="large-12 columns">
             <label for="responding">Responding to a... </label>
-            <select id="responding" name="responding">
-              <option value="missingChild">Missing Child</option>
-              <option value="MissingVulnerableAdult">Missing Vulnerable Adult</option>
+            <select id="responding" name="responding" class="responding">
+              <option value="Missing Child">Missing Child</option>
+              <option value="Missing College Student">Missing College Student</option>
+              <option value="Missing Vulnerable Adult">Missing Vulnerable Adult</option>
             </select>
           </div>
         </div>
         <div class="row">
           <div class="large-12 columns">
-            <p><a href="#circumstances" class="button right">Next &raquo;</a></p>
+            <p><button type="submit">Next <i class="fi-play"></i></button></p>
           </div>
         </div>
+        <div id="disclaimer" name="disclaimer">
+          <p>Disclaimer:</p>
+          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.</p>
+        </div>
       </fieldset>
-      <div id="disclaimer" name="disclaimer"><p>Disclaimer:</p>
-  <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-  </div>
-    </form>
 
+    </form>
   </div>
 </div>
-
-<div class="row">
-  <a name="circumstances"></a><h3>Circumstances</h3>
-  <form>
-  <div class="large-4 medium-6 small-12 columns">
-    <fieldset>
-        <legend>Health and Safety</legend>
-        <input id="alzheimers" value="alzheimers" type="checkbox"><label for="alzheimers">Alzheimer's Disease</label><br>
-        <input id-"alcohol" value="alcohol" type="checkbox"><label for="alcohol">Alcoholic</label><br>
-        <input id-"retardation" value="retardation" type="checkbox"><label for="retardation">Mental Retardation</label><br>
-        <input id-"autism" value="autism" type="checkbox"><label for="autism">Autism</label><br>
-        <input id-"suicidal" value="suicidal" type="checkbox"><label for="suicidal">Despondent/Suicidal</label><br>
-        <input id-"medical" value="medical" type="checkbox"><label for="medical">Other Medical Condition</label><br>
-        <input id-"meds" value="meds" type="checkbox"><label for="meds">Lack of required medication</label><br>    
-    </fieldset>
-  </div>
-  <div class="large-4 medium-6 small-12 columns">
-    <fieldset>
-        <legend>Age</legend>
-        <input id-"under14" value="under14" type="checkbox"><label for="under14">Children Under 14</label><br>
-        <input id-"teen" value="teen" type="checkbox"><label for="teen">Children 14-18</label><br>
-        <input id-"adult" value="adult" type="checkbox"><label for="adult">Adult</label><br>
-        <input id-"elderly" value="elderly" type="checkbox"><label for="elderly">Elderly Adult</label><br>      
-    </fieldset>
-  </div>
-  <div class="large-4 medium-6 small-12 columns">
-    <fieldset>
-        <legend>Location</legend>
-        <input id-"rural" value="rural" type="checkbox"><label for="rural">Rural</label><br>
-        <input id-"suburb" value="suburb" type="checkbox"><label for="suburb">Suburban</label><br>
-        <input id-"urban" value="urban" type="checkbox"><label for="urban">Urban</label><br>
-        <input id-"water" value="water" type="checkbox"><label for="water">Near a Body of Water</label><br>
-        <input id-"pubtrans" value="pubtrans" type="checkbox"><label for="pubtrans">Access to Public Transportation</label><br>
-    </fieldset>
-  </div>
-  <div class="large-4 medium-6 small-12 columns">
-    <fieldset>
-        <legend>Incident</legend>
-        <input id-"runaway" value="runaway" type="checkbox"><label for="runaway">Runaway</label><br>
-        <input id-"miscommunication" value="miscommunication" type="checkbox"><label for="miscommunication">Miscommunication</label><br>
-        <input id-"late" value="late" type="checkbox"><label for="late">Late Return from Activity</label><br>
-        <input id-"kidnapped" value="kidnapped" type="checkbox"><label for="kidnapped">Kidnapped</label><br>
-        <input id-"abducted" value="abducted" type="checkbox"><label for="abducted">Abducted</label><br>
-        <input id-"unknown" value="unknown" type="checkbox"><label for="unknown">Unknown Incident</label><br>
-        <input id-"precipitating" value="precipitating" type="checkbox"><label for="precipitating">Serious Precipitating Incident</label><br>
-    </fieldset>
-  </div>
-  <div class="large-4 medium-6 small-12 columns">
-    <fieldset>
-        <legend>Other Factors</legend>
-        <input id-"clues" value="clues" type="checkbox"><label for="clues">Clues indicating higher urgency</label><br>
-        <input id-"environment" value="environment" type="checkbox"><label for="environment">Extreme environmental condition</label><br>
-        <input id-"increasingtime" value="increasingtime" type="checkbox"><label for="increasingtime">Increasing time since missing</label><br>
-        <input id-"night" value="night" type="checkbox"><label for="night">Onset of night</label><br>
-        <input id-"historyrunaway" value="historyrunaway" type="checkbox"><label for="historyrunaway">History of running away</label><br>
-        <input id-"historyerratic" value="historyerratic" type="checkbox"><label for="historyerratic">History of Erratic Behavior</label><br>
-        <input id-"multiple" value="multiple" type="checkbox"><label for="multiple">Multiple Missing Together</label><br>
-    </fieldset>
-    <div class="row">
-        <div class="large-12 columns">
-          <p><a href="#tips" class="button right">Go &raquo;</a></p>
+<div class="row circumstancesContainer hide">
+  <form id="circumstancesForm" action="#" method="post">
+    <div class="columns large-12">
+      <h3 class="panelTrigger plusToggle openPanel" data-panel="circumstancesPanel">
+        <i class="fi-plus hide"></i> <i class="fi-minus"></i> Circumstances</h3>
+      <div class="circumstancesPanel">
+        <div class="large-4 medium-6 small-12 columns">
+          <fieldset>
+            <legend>Health and Safety</legend>
+            <input id="alzheimers" value="alzheimers" class="highUrgency" type="checkbox">
+            <label for="alzheimers">Alzheimer's Disease</label><br>
+            <input id="alcohol" value="alcohol" class="mediumUrgency" type="checkbox">
+            <label for="alcohol">Alcoholic / drug user</label><br>
+            <input id="mildRetardation" value="mildRetardation" class="mediumUrgency" type="checkbox">
+            <label for="mildRetardation">Mild Mental Retardation</label><br>
+            <input id="moderateRetardation" value="moderateRetardation" class="highUrgency" type="checkbox">
+            <label for="moderateRetardation">Moderate to Severe Mental Retardation</label><br>
+            <input id="suicidal" value="suicidal" class="highUrgency" type="checkbox">
+            <label for="suicidal">Despondent/Suicidal</label>
+          </fieldset>
         </div>
+        <div class="large-4 medium-6 small-12 columns">
+          <fieldset>
+            <legend>Age</legend>
+            <input id="under14" value="under14" class="highUrgency" type="checkbox">
+            <label for="under14">Children Under 14</label><br>
+            <input id="teen" value="teen" class="mediumUrgency" type="checkbox">
+            <label for="teen">Children 14-18</label><br>
+            <input id="elderly" value="elderly" class="mediumUrgency" type="checkbox">
+            <label for="elderly">Elderly Adult</label>
+          </fieldset>
+        </div>
+        <div class="large-4 medium-6 small-12 columns">
+          <fieldset>
+            <legend>Incident</legend>
+            <input id="runaway" value="runaway" class="lowUrgency" type="checkbox">
+            <label for="runaway">Runaway/ sneak away adult</label><br>
+            <input id="fugitive" value="fugutive" class="lowUrgency" type="checkbox">
+            <label for="fugitive">Fugitive of non-violent crime</label><br>
+            <input id="miscommunication" value="miscommunication" class="lowUrgency" type="checkbox">
+            <label for="miscommunication">Miscommunication</label><br>
+            <input id="late" value="late" class="lowUrgency" type="checkbox">
+            <label for="late">Late Return from Activity</label><br>
+            <input id="kidnapped" value="kidnapped" class="highUrgency" type="checkbox">
+            <label for="kidnapped">Kidnapped</label><br>
+            <input id="abducted" value="abducted" class="highUrgency" type="checkbox">
+            <label for="abducted">Abducted</label><br>
+            <input id="unknown" value="unknown" class="lowUrgency" type="checkbox">
+            <label for="unknown">Unknown Incident</label>
+          </fieldset>
+        </div>
+        <div class="large-12 columns">
+          <p><button type="submit">Go <i class="fi-play"></i></button></p>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="tipsContainer hide">
+  <div class="row">
+    <div class="large-12 columns">
+      <dl class="sub-nav">
+        <dt>View:</dt>
+        <dd class="active"><a href="#">All</a></dd>
+        <dd><a href="#">Tips</a></dd>
+        <dd><a href="#">Contacts</a></dd>
+        <dd><a href="#">Other</a></dd>
+      </dl>
     </div>
   </div>
-</form>
-</div>
-<hr>
-<div class="row">
-  <div class="large-12 columns">
-    <dl class="sub-nav"> 
-      <dt>View:</dt> 
-      <dd class="active"><a href="#">All</a></dd> 
-      <dd><a href="#">Tips</a></dd> 
-      <dd><a href="#">Contacts</a></dd> 
-      <dd><a href="#">Other</a></dd> 
-    </dl>
+  <div class="row">
+    <div class="large-12 columns">
+      <p class="highUrgency">Full search effort using maximum available resources and tactics</p>
+      <p class="highUrgency">Maximum public notification (AMBER, Missing Child/College Student or Vulnerable Adult Alert)</p>
+      <p class="highUrgency">Calling in mutual aid resources</p>
+      <p class="highUrgency mediumUrgency">Activation of additional law enforcement and search teams</p>
+      <p class="highUrgency mediumUrgency">Expanded search effort with additional resources and search teams</p>
+      <p class="highUrgency mediumUrgency">Additional public notification, including media and electronic messaging</p>
+      <p class="highUrgency mediumUrgency lowUrgency">BOLO for law enforcement agencies</p>
+      <p class="highUrgency mediumUrgency lowUrgency">Hasty search of area around PLS and likely places the person might be</p>
+      <p class="highUrgency mediumUrgency lowUrgency">Investigation of the incident including interview of appropriate persons</p>
+    </div>
   </div>
 </div>
-<div class="row">
-  <div class="large-12 columns">
-    <p>Full search effort using maximum available resources and tactics</p>
-    <p>Maximum public notification (AMBER, Missing Child/College Student or Vulnerable Adult Alert)</p>
-    <p>Calling in mutual aid resources</p>
-    <p>BOLO for law enforcement agencies</p>
-    <p>Hasty search of area around PLS and likely places the person might be</p>
-  </div>
-</div>
-<script src="assets/js/vendor/jquery.js"></script> 
+<script src="assets/js/vendor/jquery.js"></script>
 <script>
-    $.getScript("assets/js/foundation.js", function(){
-      $(document).foundation();
+  var $body             = $('body'),
+      $circForm         = $('#circumstancesForm');
+      $tipCheckBox      = $circForm.find('input'),
+      $tips             = $('.tipsContainer'),
+      $tipHighUrgency   = $tips.find('.highUrgency'),
+      $tipMediumUrgency = $tips.find('.mediumUrgency'),
+      $tipLowUrgency    = $tips.find('.lowUrgency'),
+      $panelTrigger     = $('.panelTrigger'),
+      $panelContent     = $('.panelContent'),
+      $panelSubmitted   = $('.iamaPanelSubmitted'),
+      $iamaField        = $('.iama'),
+      $respondingField  = $('.responding'),
+      $iamaValue        = $('.iamaValue'),
+      $respondingValue  = $('.respondingValue');
+
+  var hideTips = function(){
+    $tips.find('p').addClass('hide');
+  },
+    togglePlusMinus = function(){
+      if ($('.plusToggle').hasClass('openPanel')){
+        $('.plusToggle').find('.fi-minus').addClass('hide').end()
+                .find('.fi-plus').removeClass('hide').end()
+                .toggleClass('openPanel');
+
+      } else {
+        $('.plusToggle').find('.fi-minus').removeClass('hide').end()
+                .find('.fi-plus').addClass('hide').end()
+                .toggleClass('openPanel');
+      }
+
+    };
+
+  $.getScript('assets/js/foundation.js', function(){
+    $(document).foundation();
+  });
+
+  hideTips();
+
+  $body.on('submit', '#iamaForm', function(e){
+    e.preventDefault();
+
+    $iamaValue.text($iamaField.val());
+    $respondingValue.text($respondingField.val());
+
+
+    $panelSubmitted.slideToggle();
+    $('.iamaPanel').slideToggle();
+    $('.circumstancesContainer').slideToggle();
+  });
+
+
+  $body.on('submit', '#circumstancesForm', function(e){
+    e.preventDefault();
+
+    hideTips();
+
+    $tipCheckBox.each(function(){
+      var $this = $(this);
+
+      if ($this.hasClass('highUrgency') && $this.is(':checked')){
+        $tipHighUrgency.removeClass('hide');
+      }
+      if ($this.hasClass('mediumUrgency') && $this.is(':checked')){
+        $tipMediumUrgency.removeClass('hide');
+      }
+      if ($this.hasClass('lowUrgency') && $this.is(':checked')){
+        $tipLowUrgency.removeClass('hide');
+      }
     });
-    </script>
+
+    $('.circumstancesPanel').slideToggle();
+    $tips.slideToggle();
+    togglePlusMinus();
+  });
+
+  $body.on('click', '.panelTrigger', function(e){
+    e.preventDefault();
+
+    var panelClass = $(this).data('panel'),
+        $panel = $('.' + panelClass);
+
+    $panel.slideToggle();
+
+    // openPanel" data-panel="circumstancesPanel">
+    //     <i class="fi-plus hide"></i> <i class="fi-minus"></i>
+
+    if (panelClass == 'circumstancesPanel') {
+      togglePlusMinus();
+      $tips.slideToggle();
+    }
+
+    if (panelClass == 'iamaPanel') {
+      hideTips();
+      if ($tips.is(':visible')){
+        $tips.slideToggle();
+      }
+      $panelSubmitted.slideToggle();
+      $('.circumstancesContainer').slideToggle();
+    }
+  });
+
+
+
+
+</script>
 </body>
 </html>
