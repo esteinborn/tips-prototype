@@ -77,6 +77,7 @@
     <div class="columns large-12">
       <h3 class="panelTrigger plusToggle openPanel" data-panel="circumstancesPanel">
         <i class="fi-plus hide"></i> <i class="fi-minus"></i> Circumstances</h3>
+        <p class="circError hide">Please Check at least one of the circumstances below.</p>
       <div class="circumstancesPanel">
         <div class="large-4 medium-6 small-12 columns">
           <fieldset>
@@ -171,24 +172,37 @@
       $iamaField        = $('.iama'),
       $respondingField  = $('.responding'),
       $iamaValue        = $('.iamaValue'),
-      $respondingValue  = $('.respondingValue');
+      $respondingValue  = $('.respondingValue'),
+      $circError  = $('.circError'),
+      isPanelOpen = true;
 
   var hideTips = function(){
     $tips.find('p').addClass('hide');
   },
-    togglePlusMinus = function(){
-      if ($('.plusToggle').hasClass('openPanel')){
-        $('.plusToggle').find('.fi-minus').addClass('hide').end()
-                .find('.fi-plus').removeClass('hide').end()
-                .toggleClass('openPanel');
+  togglePlusMinus = function(isReset){
+    // If the panel is open, we're closing it so turn the minus into a plus
+    // If we're not resetting the panel to default
+    var isReset = isReset || false;
+    console.log("isreset: " + isReset);
+    console.log("Before If statement, isPanel Open: " + isPanelOpen);
+    if (isPanelOpen && !isReset){
+      // console.log("open, closing");
+      $('.plusToggle')
+        .find('.fi-minus').addClass('hide').end()
+        .find('.fi-plus').removeClass('hide');
+        isPanelOpen = false;
+    } else if (!isPanelOpen || isReset) {
+      // console.log("closed, opening");
+    // If the panel is closed, we're opening it so turn the plus into a minus
+    // OR if we're resetting the panel to default
+      $('.plusToggle')
+        .find('.fi-minus').removeClass('hide').end()
+        .find('.fi-plus').addClass('hide');
+        isPanelOpen = true;
+    }
+    console.log("after If statemen, isPanel open: " + isPanelOpen);
+  };
 
-      } else {
-        $('.plusToggle').find('.fi-minus').removeClass('hide').end()
-                .find('.fi-plus').addClass('hide').end()
-                .toggleClass('openPanel');
-      }
-
-    };
 
   $.getScript('assets/js/foundation.js', function(){
     $(document).foundation();
@@ -196,6 +210,7 @@
 
   hideTips();
 
+  // Initial "I am A" form
   $body.on('submit', '#iamaForm', function(e){
     e.preventDefault();
 
@@ -203,14 +218,18 @@
     $respondingValue.text($respondingField.val());
 
 
-    $panelSubmitted.slideToggle();
-    $('.iamaPanel').slideToggle();
-    $('.circumstancesContainer').slideToggle();
+    $panelSubmitted.slideDown();
+    $('.iamaPanel').slideUp();
+    $('.circumstancesPanel').show();
+    $('.circumstancesContainer').slideDown();
   });
 
-
+  // Circumstances Form Submitted
   $body.on('submit', '#circumstancesForm', function(e){
     e.preventDefault();
+
+    var hasChecked = false,
+        isValid = false;
 
     hideTips();
 
@@ -226,36 +245,65 @@
       if ($this.hasClass('lowUrgency') && $this.is(':checked')){
         $tipLowUrgency.removeClass('hide');
       }
+      if ($this.is(':checked')){
+        hasChecked = true;
+        isValid = true;
+      }
+
     });
 
-    $('.circumstancesPanel').slideToggle();
-    $tips.slideToggle();
-    togglePlusMinus();
+    if (hasChecked) {
+      window.scrollTo(0, 100)
+      $('.circumstancesPanel').slideUp();
+      $tips.slideDown();
+      togglePlusMinus();
+      $circError.hide();
+    } else {
+      window.scrollTo(0, 100)
+      $circError.show();
+    }
   });
 
+  // Clicks to both restart button and panel headings
   $body.on('click', '.panelTrigger', function(e){
     e.preventDefault();
 
     var panelClass = $(this).data('panel'),
         $panel = $('.' + panelClass);
 
+    // Slide Toggle the panel that this trigger targets
     $panel.slideToggle();
 
-    // openPanel" data-panel="circumstancesPanel">
-    //     <i class="fi-plus hide"></i> <i class="fi-minus"></i>
-
+    // If you clicked to open or close teh circumstances panel
     if (panelClass == 'circumstancesPanel') {
+      // Toggle the pluis minus sign to indicate that its possible
       togglePlusMinus();
+
+      // Slide Toggle the tips
       $tips.slideToggle();
     }
 
+    // If you clicked the Restart Button
     if (panelClass == 'iamaPanel') {
+
+      $circForm[0].reset();
+      $circError.hide();
+
+      // hide all the tips individually
       hideTips();
-      if ($tips.is(':visible')){
-        $tips.slideToggle();
-      }
-      $panelSubmitted.slideToggle();
-      $('.circumstancesContainer').slideToggle();
+
+      // If tips is visible, slide toggle it
+      $tips.slideUp();
+
+      // Close the filled "I Am A" Panel
+      $panelSubmitted.slideUp();
+
+      // Close teh Circumstances Panel
+      $('.circumstancesContainer').slideUp();
+
+      // Reset the Plus Minus state of the Circ Panel
+      togglePlusMinus(true);
+
     }
   });
 
