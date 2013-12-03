@@ -1,43 +1,39 @@
-/* line 3, C:\Documents and Settings\dcjsmgreen\My Documents\GitHub\tips/scss/app.scss */
 .circError {
   color: darkred;
   font-size: 0.85em;
   background-color: #ffbaba;
   border: 1px solid;
-  margin: 10px 0px;
-  padding: 15px 10px; }
+  margin: 0 0.5em 1em;
+  padding: 1em 0.5em; }
 
-/* line 11, C:\Documents and Settings\dcjsmgreen\My Documents\GitHub\tips/scss/app.scss */
 .top-bar .name h1 a {
   width: 85%; }
 
-/* line 15, C:\Documents and Settings\dcjsmgreen\My Documents\GitHub\tips/scss/app.scss */
 .iamaPanelSubmitted {
   margin-top: 1em; }
-  /* line 17, C:\Documents and Settings\dcjsmgreen\My Documents\GitHub\tips/scss/app.scss */
   .iamaPanelSubmitted p {
-    xmargin-top: 0.5em;
     font-size: 0.8em;
     line-height: 0.8em; }
-  /* line 23, C:\Documents and Settings\dcjsmgreen\My Documents\GitHub\tips/scss/app.scss */
   .iamaPanelSubmitted .respondingValue, .iamaPanelSubmitted .iamaValue {
     color: #597da0; }
 
-/* line 28, C:\Documents and Settings\dcjsmgreen\My Documents\GitHub\tips/scss/app.scss */
 .resetButton .button {
   padding: 0.8em;
   margin: 0;
   font-size: 0.9em; }
 
-/* line 35, C:\Documents and Settings\dcjsmgreen\My Documents\GitHub\tips/scss/app.scss */
-.circumstancesPanel fieldset {
-  padding: 0.5em 0 0 0.4em;
-  margin: 0.25em; }
-/* line 39, C:\Documents and Settings\dcjsmgreen\My Documents\GitHub\tips/scss/app.scss */
-.circumstancesPanel label {
-  font-size: 0.8em; }
+.circumstancesPanel {
+  overflow: hidden;
+  padding-top: 1em;
+  border: 1px solid #1c6277;
+  border-top: 0;
+  margin: 0 -0.75em; }
+  .circumstancesPanel fieldset {
+    padding: 0.5em 0 0 0.4em;
+    margin: 0.25em; }
+  .circumstancesPanel label {
+    font-size: 0.8em; }
 
-/* line 43, C:\Documents and Settings\dcjsmgreen\My Documents\GitHub\tips/scss/app.scss */
 .tipsContainer p {
   font-size: 0.9em;
   padding: 0.15em 0.25em;
@@ -45,16 +41,16 @@
   margin: 0.5em 0;
   background-color: #efefef; }
 
-/* line 50, C:\Documents and Settings\dcjsmgreen\My Documents\GitHub\tips/scss/app.scss */
+.contacts div {
+  padding: 0.5em 0 1.5em 0; }
+.contacts address {
+  line-height: 1.25em; }
+
 .plusToggle {
   background-color: #1c6277;
   padding: 0.25em 0.5em;
   margin: 0 -0.5em;
   color: white; }
-  /* line 56, C:\Documents and Settings\dcjsmgreen\My Documents\GitHub\tips/scss/app.scss */
   .plusToggle:hover {
+    cursor: pointer;
     background-color: #007ba1; }
-
-/* line 61, C:\Documents and Settings\dcjsmgreen\My Documents\GitHub\tips/scss/app.scss */
-.sub-nav {
-  margin: 1.5em 0 0 0; }

@@ -9,7 +9,7 @@
 <script src="assets/js/vendor/custom.modernizr.js"></script>
 </head>
 <body>
-<div class="fixed">
+<div>
   <nav class="top-bar" data-topbar>
   <div class="large-11 small-10 columns">
     <ul class="title-area">
@@ -32,7 +32,7 @@
       <p>Responding to a <b><span class="respondingValue"></span></b></p>
     </div>
     <div class="small-4 columns resetButton">
-      <p><a href="#" class="button panelTrigger" data-panel="iamaPanel"><i class="fi-rewind"></i><br>Restart</a></p>
+      <p><a href="#" class="button panelTrigger right" data-panel="iamaPanel"><i class="fi-rewind"></i><br>Restart</a></p>
     </div>
   </div>
 
@@ -79,8 +79,10 @@
     <div class="columns large-12">
       <h3 class="panelTrigger plusToggle openPanel" data-panel="circumstancesPanel">
         <i class="fi-plus hide"></i> <i class="fi-minus"></i> Circumstances</h3>
-        <p class="circError hide">Please Check at least one of the circumstances below.</p>
       <div class="circumstancesPanel">
+        <div class="columns large-12">
+          <p class=" circError hide">Please Check at least one of the circumstances below.</p>
+        </div>
         <div class="large-4 medium-6 small-12 columns">
           <fieldset>
             <legend>Health and Safety</legend>
@@ -127,7 +129,7 @@
           </fieldset>
         </div>
         <div class="large-12 columns">
-          <p><button type="submit">Go <i class="fi-play"></i></button></p>
+          <button type="submit">Go <i class="fi-play"></i></button>
         </div>
       </div>
     </div>
@@ -136,17 +138,18 @@
 <div class="tipsContainer hide">
   <div class="row">
     <div class="large-12 columns">
-      <dl class="sub-nav">
-        <dt>View:</dt>
-        <dd class="active"><a href="#">All</a></dd>
-        <dd><a href="#">Tips</a></dd>
-        <dd><a href="#">Contacts</a></dd>
-        <dd><a href="#">Other</a></dd>
-      </dl>
+      <div data-magellan-expedition="fixed">
+        <dl class="sub-nav">
+          <dd data-magellan-arrival="tips"><a href="#tips">Tips</a></dd>
+          <dd data-magellan-arrival="contacts"><a href="#contacts">Contacts</a></dd>
+        </dl>
+      </div>
     </div>
   </div>
   <div class="row">
     <div class="large-12 columns">
+      <a name="tips"></a>
+      <h3 data-magellan-destination="tips">Tips</h3>
       <p class="highUrgency">Full search effort using maximum available resources and tactics</p>
       <p class="highUrgency">Maximum public notification (AMBER, Missing Child/College Student or Vulnerable Adult Alert)</p>
       <p class="highUrgency">Calling in mutual aid resources</p>
@@ -156,10 +159,50 @@
       <p class="highUrgency mediumUrgency lowUrgency">BOLO for law enforcement agencies</p>
       <p class="highUrgency mediumUrgency lowUrgency">Hasty search of area around PLS and likely places the person might be</p>
       <p class="highUrgency mediumUrgency lowUrgency">Investigation of the incident including interview of appropriate persons</p>
+      <div class="contacts">
+        <a name="contacts"></a>
+        <h3 data-magellan-destination="contacts">Contacts</h3>
+        <div class="highUrgency">
+          <address>
+            Chief Sammy Sample<br>
+            State Police Chief<br>
+            NYS Police<br>
+            Building 1 Room 2<br>
+            123 Easy Street<br>
+            Albany, NY 12240<br>
+          </address>
+          <a href="tel:518-123-1234">(518) 123-1234</a>
+        </div>
+        <div class="highUrgency mediumUrgency">
+          <address>
+            Deputy Sammy Sample<br>
+            State Police Deputy<br>
+            NYS Police<br>
+            Building 1 Room 2<br>
+            123 Easy Street<br>
+            Albany, NY 12240<br>
+          </address>
+          <a href="tel:518-456-7890">(518) 456-7890</a>
+
+        </div>
+        <div class="highUrgency mediumUrgency lowUrgency">
+          <address>
+            Officer Sammy Sample<br>
+            State Police Officer<br>
+            NYS Police<br>
+            Building 1 Room 2<br>
+            123 Easy Street<br>
+            Albany, NY 12240<br>
+          </address>
+          <a href="tel:518-987-6543">(518) 987-6543</a>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 <script src="assets/js/vendor/jquery.js"></script>
+<script src="assets/js/foundation.js"></script>
+<script src="assets/js/foundation/foundation.magellan.js"></script>
 <script>
   var $body             = $('body'),
       $circForm         = $('#circumstancesForm');
@@ -178,8 +221,11 @@
       $circError  = $('.circError'),
       isPanelOpen = true;
 
+  $(document).foundation();
+
+
   var hideTips = function(){
-    $tips.find('p').addClass('hide');
+    $tips.find('.highUrgency, .mediumUrgency, .lowUrgency').addClass('hide');
   },
   togglePlusMinus = function(isReset){
     // If the panel is open, we're closing it so turn the minus into a plus
@@ -204,11 +250,6 @@
     }
     // console.log("after If statemen, isPanel open: " + isPanelOpen);
   };
-
-
-  $.getScript('assets/js/foundation.js', function(){
-    $(document).foundation();
-  });
 
   hideTips();
 
