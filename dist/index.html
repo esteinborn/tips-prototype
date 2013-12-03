@@ -183,8 +183,8 @@
     // If the panel is open, we're closing it so turn the minus into a plus
     // If we're not resetting the panel to default
     var isReset = isReset || false;
-    console.log("isreset: " + isReset);
-    console.log("Before If statement, isPanel Open: " + isPanelOpen);
+    // console.log("isreset: " + isReset);
+    // console.log("Before If statement, isPanel Open: " + isPanelOpen);
     if (isPanelOpen && !isReset){
       // console.log("open, closing");
       $('.plusToggle')
@@ -200,7 +200,7 @@
         .find('.fi-plus').addClass('hide');
         isPanelOpen = true;
     }
-    console.log("after If statemen, isPanel open: " + isPanelOpen);
+    // console.log("after If statemen, isPanel open: " + isPanelOpen);
   };
 
 
