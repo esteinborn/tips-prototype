@@ -1,0 +1,7 @@
+/* line 3, C:\Documents and Settings\dcjsmgreen\My Documents\GitHub\tips/scss/app.scss */
+.circError {
+  color: white;
+  font-weight: bold;
+  padding: 0.25em;
+  background-color: darkred;
+  border: 1px solid black; }
