@@ -1,13 +1,16 @@
 body {
   font-family: Arial, "Helvetica Neue", "Helvetica", Helvetica, sans-serif; }
 
-.circError {
+.circError, .prototypeMessage {
   color: darkred;
   font-size: 0.85em;
   background-color: #ffbaba;
   border: 1px solid;
   margin: 0 0.5em 1em;
   padding: 0.5em; }
+
+.prototypeMessage {
+  margin-top: 1em; }
 
 .top-bar .name h1 a {
   width: 85%; }
@@ -38,7 +41,7 @@ body {
   .circumstancesPanel label {
     font-size: 0.8em; }
 
-.contacts {
+.resources {
   line-height: 1.35em; }
 
 .plusToggle {
