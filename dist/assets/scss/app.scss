@@ -2,51 +2,76 @@
 @charset "UTF-8";
 .circError {
 	color: darkred;
-	font-size:.85em;
+	font-size: 0.85em;
 	background-color: #FFBABA;
 	border: 1px solid;
-	margin: 10px 0px;
-	padding:15px 10px;
+	margin: 0 0.5em 1em;
+	padding: 1em 0.5em;
 }
+
 .top-bar .name h1 a {
 	width: 85%;
-
 }
+
 .iamaPanelSubmitted {
-	margin-top:1em;
+	padding: 1em 0;
+
 	p {
-		xmargin-top:0.5em;
-		font-size:0.8em;
-		line-height:0.8em;
+		font-size: 0.8em;
+		line-height: 0.8em;
 	}
+
 	.respondingValue,
 	.iamaValue {
-		color:#597DA0;
+		color: #597DA0;
 	}
 }
 
 .resetButton .button {
-	padding:0.8em;
-	margin:0;
-	font-size:0.9em;
+	padding: 0.8em;
+	margin: 0;
+	font-size: 0.9em;
 }
 
 .circumstancesPanel {
+	overflow: hidden;
+	padding-top: 1em;
+	border: 1px solid #1C6277;
+	border-top: 0;
+	margin: 0 -0.7em 2em -0.7em;
+
 	fieldset {
-		padding:0.5em 0 0 0.4em;
-		margin:0.25em;
-		}
+		padding: 0.5em 0 0 0.4em;
+		margin: 0.25em;
+	}
+
 	label {
-		font-size:.80em;
+		font-size: 0.80em;
 	}
 }
-.tipsContainer p {
-	font-size:.9em;
-	padding:0.15em 0.25em;
-	border:1px solid #cccccc;
-	margin:0.5em 0;
-	background-color:#efefef;
+
+.tipsContainer {
+
+	p {
+		font-size: 0.9em;
+		padding: 0.15em 0.25em;
+		border: 1px solid #cccccc;
+		margin: 0.5em 0;
+		background-color: #efefef;
+	}
 }
+
+.contacts {
+
+	div {
+		padding: 0.5em 0 1.5em 0;
+	}
+
+	address {
+		line-height: 1.25em;
+	}
+}
+
 .plusToggle {
 	background-color: #1C6277;
 	padding: 0.25em 0.5em;
@@ -54,10 +79,8 @@
 	color: white;
 
 	&:hover{
-		background-color:#007BA1;
+		cursor: pointer;
+		background-color: #007BA1;
 	}
 
-}
-.sub-nav {
-	margin:1.5em 0 0 0;
 }

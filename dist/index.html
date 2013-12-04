@@ -24,19 +24,16 @@
   </nav>
 </div>
 
-<div class="row">
-
-  <div class="iamaPanelSubmitted hide">
-    <div class="small-8 columns">
-      <p>I am a <b><span class="iamaValue"></span>,</b></p>
-      <p>Responding to a <b><span class="respondingValue"></span></b></p>
-    </div>
-    <div class="small-4 columns resetButton">
-      <p><a href="#" class="button panelTrigger right" data-panel="iamaPanel"><i class="fi-rewind"></i><br>Restart</a></p>
-    </div>
+<div class="row iamaPanelSubmitted hide">
+  <div class="small-9 columns">
+    <p>I am a <b><span class="iamaValue"></span>,</b> responding to a <b><span class="respondingValue"></span></b></p>
   </div>
-
-  <div class="large-12 columns iamaPanel">
+  <div class="small-3 columns resetButton">
+    <p><a href="#" class="button panelTrigger right" data-panel="iamaPanel"><i class="fi-rewind"></i><br>Restart</a></p>
+  </div>
+</div>
+<div class="row iamaPanel">
+  <div class="large-12 columns">
     <form id="iamaForm" action="#" method="post">
       <fieldset>
         <legend>Complete the following</legend>
@@ -140,7 +137,7 @@
     <div class="large-12 columns">
       <div data-magellan-expedition="fixed">
         <dl class="sub-nav">
-          <dd data-magellan-arrival="tips"><a href="#tips">Tips</a></dd>
+          <dd data-magellan-arrival="tips" class="active"><a href="#tips">Tips</a></dd>
           <dd data-magellan-arrival="contacts"><a href="#contacts">Contacts</a></dd>
         </dl>
       </div>
@@ -183,7 +180,6 @@
             Albany, NY 12240<br>
           </address>
           <a href="tel:518-456-7890">(518) 456-7890</a>
-
         </div>
         <div class="highUrgency mediumUrgency lowUrgency">
           <address>
@@ -240,7 +236,7 @@
         .find('.fi-plus').removeClass('hide');
         isPanelOpen = false;
     } else if (!isPanelOpen || isReset) {
-      // console.log("closed, opening");
+    // console.log("closed, opening");
     // If the panel is closed, we're opening it so turn the plus into a minus
     // OR if we're resetting the panel to default
       $('.plusToggle')
@@ -248,7 +244,6 @@
         .find('.fi-plus').addClass('hide');
         isPanelOpen = true;
     }
-    // console.log("after If statemen, isPanel open: " + isPanelOpen);
   };
 
   hideTips();
@@ -294,16 +289,17 @@
       }
 
     });
-
+    // If you checked a circumstance, show tips/contacts
     if (hasChecked) {
-      window.scrollTo(0, 100)
       $('.circumstancesPanel').slideUp();
       $tips.slideDown();
       togglePlusMinus();
       $circError.hide();
+      window.scrollTo(0, 0);
     } else {
-      window.scrollTo(0, 100)
-      $circError.show();
+      // If you didnt select a checkbox, throw an error
+      window.scrollTo(0, 120);
+      $circError.fadeIn(200);
     }
   });
 

@@ -1,19 +1,23 @@
+body {
+  font-family: Arial, "Helvetica Neue", "Helvetica", Helvetica, sans-serif; }
+
 .circError {
   color: darkred;
   font-size: 0.85em;
   background-color: #ffbaba;
   border: 1px solid;
   margin: 0 0.5em 1em;
-  padding: 1em 0.5em; }
+  padding: 0.5em; }
 
 .top-bar .name h1 a {
   width: 85%; }
 
 .iamaPanelSubmitted {
-  margin-top: 1em; }
+  padding: 1em 0; }
   .iamaPanelSubmitted p {
-    font-size: 0.8em;
-    line-height: 0.8em; }
+    font-size: 0.85em;
+    margin-bottom: 0;
+    line-height: 1.3em; }
   .iamaPanelSubmitted .respondingValue, .iamaPanelSubmitted .iamaValue {
     color: #597da0; }
 
@@ -27,24 +31,15 @@
   padding-top: 1em;
   border: 1px solid #1c6277;
   border-top: 0;
-  margin: 0 -0.75em; }
+  margin: 0 -0.7em 2em -0.7em; }
   .circumstancesPanel fieldset {
     padding: 0.5em 0 0 0.4em;
     margin: 0.25em; }
   .circumstancesPanel label {
     font-size: 0.8em; }
 
-.tipsContainer p {
-  font-size: 0.9em;
-  padding: 0.15em 0.25em;
-  border: 1px solid #cccccc;
-  margin: 0.5em 0;
-  background-color: #efefef; }
-
-.contacts div {
-  padding: 0.5em 0 1.5em 0; }
-.contacts address {
-  line-height: 1.25em; }
+.contacts {
+  line-height: 1.35em; }
 
 .plusToggle {
   background-color: #1c6277;
@@ -54,3 +49,12 @@
   .plusToggle:hover {
     cursor: pointer;
     background-color: #007ba1; }
+
+.highUrgency, .mediumUrgency, .lowUrgency {
+  border: 1px solid #cecece;
+  font-size: 0.9em;
+  padding: 0.75em 0.5em;
+  margin: 0 -1.1em;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0; }
