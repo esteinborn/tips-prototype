@@ -24,19 +24,17 @@
   </nav>
 </div>
 
-<div class="row">
-
-  <div class="iamaPanelSubmitted hide">
-    <div class="small-8 columns">
-      <p>I am a <b><span class="iamaValue"></span>,</b></p>
-      <p>Responding to a <b><span class="respondingValue"></span></b></p>
-    </div>
-    <div class="small-4 columns resetButton">
-      <p><a href="#" class="button panelTrigger right" data-panel="iamaPanel"><i class="fi-rewind"></i><br>Restart</a></p>
-    </div>
+<div class="row iamaPanelSubmitted hide">
+  <div class="small-8 columns">
+    <p>I am a <b><span class="iamaValue"></span>,</b></p>
+    <p>Responding to a <b><span class="respondingValue"></span></b></p>
   </div>
-
-  <div class="large-12 columns iamaPanel">
+  <div class="small-4 columns resetButton">
+    <p><a href="#" class="button panelTrigger right" data-panel="iamaPanel"><i class="fi-rewind"></i><br>Restart</a></p>
+  </div>
+</div>
+<div class="row iamaPanel">
+  <div class="large-12 columns">
     <form id="iamaForm" action="#" method="post">
       <fieldset>
         <legend>Complete the following</legend>
@@ -303,7 +301,7 @@
       $circError.hide();
     } else {
       window.scrollTo(0, 100)
-      $circError.show();
+      $circError.fadeIn(200);
     }
   });
 
