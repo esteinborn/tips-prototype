@@ -9,6 +9,9 @@ body {
 body, html, input, select, option, textarea, button, input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea {
   font-size: 16px; }
 
+input[type="checkbox"] + label {
+  padding: 0.75em 0; }
+
 .circError, .prototypeMessage {
   color: darkred;
   font-size: 0.85em;
@@ -47,7 +50,7 @@ body, html, input, select, option, textarea, button, input[type="text"], input[t
     padding: 0.5em 0 0 0.4em;
     margin: 0.25em; }
   .circumstancesPanel label {
-    font-size: 0.8em; }
+    font-size: 1em; }
 
 .resources {
   line-height: 1.35em; }
