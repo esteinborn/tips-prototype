@@ -8,9 +8,35 @@ body {
 
 body {
   font-family: Arial, "Helvetica Neue", "Helvetica", Helvetica, sans-serif;
-  padding-bottom: 1em; }
-body, html, input, select, option, textarea, button,input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea {
-    font-size: 16px;
+  padding-bottom: 1em;
+}
+
+body,
+html,
+input,
+select,
+option,
+textarea,
+button,
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea {
+  font-size: 16px;
+}
+
+input[type="checkbox"] + label {
+	padding: 0.75em 0;
 }
 
 .circError,
@@ -22,6 +48,7 @@ body, html, input, select, option, textarea, button,input[type="text"], input[ty
 	margin: 0 0.5em 1em;
 	padding: 0.5em;
 }
+
 .prototypeMessage {
 	margin-top: 1em;
 }
@@ -65,7 +92,7 @@ body, html, input, select, option, textarea, button,input[type="text"], input[ty
 	}
 
 	label {
-		font-size: 0.80em;
+		font-size: 1em;
 	}
 }
 
