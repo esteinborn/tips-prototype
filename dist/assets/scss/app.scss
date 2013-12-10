@@ -1,12 +1,29 @@
 // Make sure the charset is set appropriately
 @charset "UTF-8";
-.circError {
+
+body {
+  font-family: Arial, "Helvetica Neue", "Helvetica", Helvetica, sans-serif;
+  padding-bottom: 1em;
+}
+
+body {
+  font-family: Arial, "Helvetica Neue", "Helvetica", Helvetica, sans-serif;
+  padding-bottom: 1em; }
+body, html, input, select, option, textarea, button,input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea {
+    font-size: 16px;
+}
+
+.circError,
+.prototypeMessage {
 	color: darkred;
 	font-size: 0.85em;
 	background-color: #FFBABA;
 	border: 1px solid;
 	margin: 0 0.5em 1em;
-	padding: 1em 0.5em;
+	padding: 0.5em;
+}
+.prototypeMessage {
+	margin-top: 1em;
 }
 
 .top-bar .name h1 a {
@@ -17,14 +34,16 @@
 	padding: 1em 0;
 
 	p {
-		font-size: 0.8em;
-		line-height: 0.8em;
+		font-size: 0.85em;
+		margin-bottom: 0;
+		line-height: 1.3em;
 	}
 
 	.respondingValue,
 	.iamaValue {
 		color: #597DA0;
 	}
+
 }
 
 .resetButton .button {
@@ -50,26 +69,8 @@
 	}
 }
 
-.tipsContainer {
-
-	p {
-		font-size: 0.9em;
-		padding: 0.15em 0.25em;
-		border: 1px solid #cccccc;
-		margin: 0.5em 0;
-		background-color: #efefef;
-	}
-}
-
-.contacts {
-
-	div {
-		padding: 0.5em 0 1.5em 0;
-	}
-
-	address {
-		line-height: 1.25em;
-	}
+.resources {
+	line-height: 1.35em;
 }
 
 .plusToggle {
@@ -83,4 +84,16 @@
 		background-color: #007BA1;
 	}
 
+}
+
+.highUrgency,
+.mediumUrgency,
+.lowUrgency {
+	border: 1px solid #CECECE;
+	font-size: 0.9em;
+	padding: 0.75em 0.5em;
+	margin: 0 -1.1em;
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 0;
 }
